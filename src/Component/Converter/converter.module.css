@@ -1,0 +1,7 @@
+select {
+	outline: none;
+	border-radius: 10px;
+
+	width: 200px;
+	overflow: hidden;
+}
