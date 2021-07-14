@@ -2,7 +2,7 @@ import s from './App.module.css';
 import { BrowserRouter, NavLink, Route } from 'react-router-dom'
 import RateTableContainer from './Component/RateTable/RateTableContainer';
 import { useEffect } from 'react';
-import { getValute } from './Store/app-reducer';
+import { getValute, getPreviousValue } from './Store/app-reducer';
 import { connect } from 'react-redux';
 import ConverterContainer from './Component/Converter/ConverterContainer';
 
@@ -29,4 +29,4 @@ const App = (props) => {
 
 
 
-export default connect(null, { getValute })(App);
+export default connect(null, { getValute, getPreviousValue })(App);

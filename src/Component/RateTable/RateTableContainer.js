@@ -6,7 +6,9 @@ import RateTable from './RateTable'
 
 
 const RateTableContainer = (props) => {
+
     let valute = Object.values(props.valute)
+    let prevValute = Object.values(props.prevValute)
 
     let changeToFavorite = (elem) => {
         props.setFavoriteCurrency(elem)
@@ -23,6 +25,7 @@ const RateTableContainer = (props) => {
             changeToFavorite={changeToFavorite}
             removeFromFavorite={removeFromFavorite}
             valute={valute}
+            prevValute={prevValute}
             favoriteCurrency={props.favoriteCurrency}
         />
     )
@@ -30,8 +33,9 @@ const RateTableContainer = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        valute: state.valute,
-        favoriteCurrency: state.rate.favoriteCurrency
+        valute: state.valute.valute,
+        prevValute: state.valute.prevValute,
+        favoriteCurrency: state.rate.favoriteCurrency,
     }
 }
 
