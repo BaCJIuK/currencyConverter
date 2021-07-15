@@ -2,7 +2,7 @@ import * as axios from 'axios'
 
 
 const SET_VALUTE = 'SET_VALUTE'
-const SET_PREV_VALUTE = 'SET_PREV_VALUTE'
+
 
 let initialState = {
 	valute: {},
@@ -29,11 +29,6 @@ export const setValute = (valute, prevValute) => {
 
 export const getValute = () => dispatch => {
 
-	/* axios.get('https://www.cbr-xml-daily.ru/daily_json.js')
-		.then(response => {
-			dispatch(setValute(response.data.Valute))
-			dispatch(getPreviousValue(response.data.PreviousURL))
-		}) */
 
 	axios.get('https://www.cbr-xml-daily.ru/daily_json.js')
 		.then(response => {

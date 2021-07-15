@@ -17,7 +17,7 @@ const ConverterContainer = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		valute: state.valute
+		valute: state.valute.valute
 	}
 }
 

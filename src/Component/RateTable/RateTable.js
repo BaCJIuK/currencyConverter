@@ -32,7 +32,7 @@ const RateTable = (props) => {
                             <div className={`${s.favoreteCurrency__item} ${s.item__Name}`} >{elem.Name}</div>
                             <div className={`${s.favoreteCurrency__item} ${s.item__value}`}>{elem.Value.toFixed(2)}</div>
                             <div className={`${s.item} ${s.item__value}`}>{props.prevValute.map(el => el.CharCode == elem.CharCode ? calculateDifferent(elem.Value, el.Value) : '')}</div>
-                            <div className={`${s.item} ${s.item__button}`}><button onClick={(e) => props.removeFromFavorite(elem)}>убрать из избранного</button></div>
+                            <div className={`${s.item} ${s.item__button}`}><button onClick={() => props.removeFromFavorite(elem)}>убрать из избранного</button></div>
                         </div>
                     ))
 
