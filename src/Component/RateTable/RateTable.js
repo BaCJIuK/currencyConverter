@@ -28,7 +28,7 @@ const RateTable = (props) => {
             <div className={s.favoriteCurrencyWrapper}>
                 {props.favoriteCurrency ?
                     props.favoriteCurrency.map(elem => (
-                        <div className={`${s.itemWrapper} ${s.itemWrapper__changed}`}>
+                        <div key={elem.NumCode} className={`${s.itemWrapper} ${s.itemWrapper__changed}`}>
                             <div className={`${s.favoreteCurrency__item} ${s.item__Name}`} >{elem.Name}</div>
                             <div className={`${s.favoreteCurrency__item} ${s.item__value}`}>{elem.Value.toFixed(2)}</div>
                             <div className={`${s.item} ${s.item__value}`}>{props.prevValute.map(el => el.CharCode == elem.CharCode ? calculateDifferent(elem.Value, el.Value) : '')}</div>
