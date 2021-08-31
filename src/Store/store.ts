@@ -12,4 +12,7 @@ let reducers = combineReducers({
 
 let store = createStore(reducers, applyMiddleware(thunk))
 
+export type rootState = ReturnType<typeof store.getState>
+export type dispatchType = typeof store.dispatch
+
 export default store
