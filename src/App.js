@@ -13,6 +13,9 @@ const App = (props) => {
     props.getValute()
   }, [])
 
+  console.log('test create new branch with commit');
+
+
   return (
     <BrowserRouter>
       <div className={s.wrapper}>
